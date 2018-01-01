@@ -1,0 +1,68 @@
+body {
+	margin: 0px;
+}
+
+#header-wrapper {
+	background-color: rgb(100, 100, 100);
+}
+
+/*-------------------------------------TITLE-------------------------------------*/
+
+h1 { 
+}
+
+/*--------------------------------SEPARATION BAR---------------------------------*/
+
+hr {
+}
+
+/*-------------------------------------TABS--------------------------------------*/
+
+#tabs {
+}
+
+button {
+}
+
+button:hover {
+}
+
+button.active {
+}
+
+/*---------------------------------MAIN CONTENT----------------------------------*/
+
+#main-content {
+}
+
+.dropdown-info {
+}
+
+h3 { /* h3 == main headings within text */
+}
+
+h4 { /* h4 == reveal-buttons with hidden info */
+}
+
+h5 { /* h5 == lesser main headings within text */
+}
+
+h6 { /* h6 == not really a header, more like metadata description */
+}
+
+h4:hover {
+}
+
+/* Home */
+
+/* Projects */
+
+/* Coursework */
+
+/* Personal Corner */
+
+/* Footer (just to pad the bottom of the website) */
+
+footer { 
+	visibility: hidden;
+}
