@@ -13,6 +13,7 @@ html {
 body {
 	height: 100%;
 	color: #DFF8EB;
+	margin: auto;
 	background-color: #222222;
 	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
