@@ -119,6 +119,7 @@ button.active {
 }
 
 h3 { /* h3 == main headings within text */
+	position: relative;
 }
 
 h4 { /* h4 == reveal-buttons with hidden info */
