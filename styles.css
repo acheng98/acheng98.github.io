@@ -1,14 +1,20 @@
 body {
-	margin: 0px;
+	background-color: #222222;
 }
 
 #header-wrapper {
-	background-color: rgb(100, 100, 100);
+}
+
+.thumbnail {
+    position: relative;
 }
 
 /*-------------------------------------TITLE-------------------------------------*/
-
 h1 { 
+	position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
 }
 
 /*--------------------------------SEPARATION BAR---------------------------------*/
