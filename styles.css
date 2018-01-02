@@ -84,6 +84,7 @@ hr {
 	margin: auto;
 	text-align: center;
 	padding: 0.5em 0em;
+	position: sticky;
 }
 
 button {
@@ -120,6 +121,7 @@ button.active {
 
 h3 { /* h3 == main headings within text */
 	position: relative;
+	text-transform: uppercase;
 }
 
 h4 { /* h4 == reveal-buttons with hidden info */
