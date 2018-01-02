@@ -5,6 +5,6 @@ function change_tab(tab_name) {
 
 function main() {
 	$('#Home, #Coursework, #Projects, #Misc').hide();
-	$('#Home').show();
 	$('#main-content').show();
+	$('#Home').show();
 }
