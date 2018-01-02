@@ -5,5 +5,5 @@ function change_tab(tab_name) {
 
 function main() {
 	$('#Home, #Coursework, #Projects, #Misc').hide();
-	$('#Home').fadeIn(500);
+	$('#Home').click();
 }
