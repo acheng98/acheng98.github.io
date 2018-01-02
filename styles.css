@@ -33,14 +33,10 @@ body {
     background-size: cover;
 }
 
-.thumbnail {
-    position: relative;
-}
-
 /*-----------------------------------CSS GRID-------------------------------------*/
 
 .grid {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -78,11 +74,11 @@ h1 {
 hr {
 }
 
-/*-------------------------------------Menu--------------------------------------*/
+/*-------------------------------------MENU--------------------------------------*/
 
 #menu {
 	border: #777777;
-	width: 80%;
+	height: 10%;
 	margin: auto;
 	text-align: center;
 	padding: 0.5em 0em;
@@ -110,16 +106,6 @@ button.active {
 	color: #b3cde0;
 }
 /*---------------------------------MAIN CONTENT----------------------------------*/
-
-#main-content {
-	display: none;
-	width: 80%;
-	margin: auto;
-	text-align: left;
-}
-
-.dropdown-info {
-}
 
 h3 { /* h3 == main headings within text */
 	position: relative;
