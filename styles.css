@@ -1,8 +1,23 @@
+html {
+	height: 100%;
+}
+
 body {
+	height: 100%;
 	background-color: #222222;
 }
 
-#header-wrapper {
+#header {
+	/* The image used */
+	background-image: "./sunrise.jpg";
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .thumbnail {
@@ -11,6 +26,7 @@ body {
 
 /*-------------------------------------TITLE-------------------------------------*/
 h1 { 
+	position: relative;
 	text-align: center;
     top: 45%;
     left: 0;
