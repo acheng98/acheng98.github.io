@@ -109,6 +109,7 @@ button.active {
 /*---------------------------------MAIN CONTENT----------------------------------*/
 
 #main-content {
+	display: none;
 	width: 80%;
 	margin: auto;
 	text-align: left;
