@@ -60,7 +60,7 @@ hr {
 /*-------------------------------------Menu--------------------------------------*/
 
 #menu {
-	width: 40em;
+	width: 80%;
 	margin: auto;
 	text-align: center;
 	padding: 0.5em 0em;
@@ -69,6 +69,8 @@ hr {
 button {
 	border: none;
 	outline: none;
+	background-color: #222222;
+	color: #DFF8EB;
 	font-size: 1.2em;
 	text-align: center;
 	text-decoration: none;
@@ -88,7 +90,7 @@ button.active {
 
 #main-content {
 	display: none;
-	width: 40em;
+	width: 80%;
 	margin: auto;
 	text-align: left;
 }
