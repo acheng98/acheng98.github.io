@@ -1,9 +1,18 @@
+/* Color Scheme
+	Primary: #222222
+	Secondary: #03396C
+	Off-White: #DFF8EB
+	Light: #B3CDE0
+	Contrast: #702632
+*/
+
 html {
 	height: 100%;
 }
 
 body {
 	height: 100%;
+	color: #DFF8EB;
 	background-color: #222222;
 	margin: 0;
 	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -40,7 +49,6 @@ h1 {
 	letter-spacing: 0.08em;
 	margin: 0;
 	padding: 0;
-	color: #ffffff;
 	text-transform: uppercase;
 }
 
@@ -61,8 +69,6 @@ hr {
 button {
 	border: none;
 	outline: none;
-	background-color: #222222;
-	color: #FFFFFF;
 	font-size: 1.2em;
 	text-align: center;
 	text-decoration: none;
@@ -81,6 +87,10 @@ button.active {
 /*---------------------------------MAIN CONTENT----------------------------------*/
 
 #main-content {
+	display: none;
+	width: 40em;
+	margin: auto;
+	text-align: left;
 }
 
 .dropdown-info {
@@ -101,7 +111,7 @@ h6 { /* h6 == not really a header, more like metadata description */
 h4:hover {
 }
 
-/* Home */
+/* About */
 
 /* Projects */
 
