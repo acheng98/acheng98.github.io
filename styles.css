@@ -14,7 +14,6 @@ body {
 	height: 100%;
 	color: #DFF8EB;
 	background-color: #222222;
-	margin: 0;
 	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
@@ -22,8 +21,9 @@ body {
 	/* The image used */
 	background-image: url("./sunrise.jpg");
 
-    /* Full height */
+    /* Full height, no margin */
     height: 100%; 
+    margin: 0;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -114,6 +114,8 @@ h4:hover {
 }
 
 /* About */
+
+
 
 /* Projects */
 
