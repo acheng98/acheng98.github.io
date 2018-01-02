@@ -30,7 +30,7 @@ body {
 h1 { 
 	position: relative;
 	text-align: center;
-	top: 45%;
+	top: 50%;
 	left: 0;
 	width: 100%;
 	clear: none;
@@ -49,20 +49,35 @@ h1 {
 hr {
 }
 
-/*-------------------------------------TABS--------------------------------------*/
+/*-------------------------------------Menu--------------------------------------*/
 
-#tabs {
+#menu {
+	width: 40em;
+	margin: auto;
+	text-align: center;
+	padding: 0.5em 0em;
 }
 
 button {
+	border: none;
+	outline: none;
+	background-color: rgb(100, 100, 100);
+	color: #FFFFFF;
+	font-size: 1.2em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: none;
 }
 
 button:hover {
+	cursor: pointer;
+	color: rgb(255, 223, 0);
 }
 
 button.active {
+	color: color: rgb(255, 223, 0);
 }
-
 /*---------------------------------MAIN CONTENT----------------------------------*/
 
 #main-content {
