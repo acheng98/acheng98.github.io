@@ -116,7 +116,9 @@ h4:hover {
 
 /* About */
 
-
+#About {
+	padding: 2.0em 4.0em 2.0em 0;
+}
 
 /* Projects */
 
