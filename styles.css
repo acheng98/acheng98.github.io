@@ -5,6 +5,8 @@ html {
 body {
 	height: 100%;
 	background-color: #222222;
+	margin: 0;
+	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 #header {
@@ -28,9 +30,18 @@ body {
 h1 { 
 	position: relative;
 	text-align: center;
-    top: 45%;
-    left: 0;
-    width: 100%;
+	top: 45%;
+	left: 0;
+	width: 100%;
+	clear: none;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: 800;
+	line-height: 1.25;
+	letter-spacing: 0.08em;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
 }
 
 /*--------------------------------SEPARATION BAR---------------------------------*/
