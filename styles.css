@@ -9,7 +9,7 @@ body {
 
 #header {
 	/* The image used */
-	background-image: "./sunrise.jpg";
+	background-image: url("./sunrise.jpg");
 
     /* Full height */
     height: 100%; 
