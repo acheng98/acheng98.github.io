@@ -1,0 +1,105 @@
+// Colors
+$light: rgb(198,198,198);
+$background: rgb(19,19,19);
+$gray-primary: rgb(22,22,22);
+$gray-secondary: rgb(32,32,32);
+$dark: black;
+$hyperlink: #4682B4;
+
+// Fonts
+$header-font-family: Quicksand,"Open Sans",Helvetica,Arial,Verdana,sans-serif;
+$body-font-family: "Open Sans",Helvetica,Arial,Verdana,sans-serif;
+
+@mixin header-font {
+    font-family: $header-font-family;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    word-spacing: normal;
+    color: $light;
+}
+
+@mixin body-font {
+    font-family: $body-font-family;
+    font-size: 14px;
+    line-height: 145%;
+    letter-spacing: normal;
+    word-spacing: normal;
+    margin-bottom: 20px;
+}
+
+
+// General CSS
+body {
+    background: $background;
+    color: $light;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+#vertical-spacer {
+    height: 40px;
+    background: $dark;
+    margin: 0px;
+}
+
+#container {
+    margin: 0 auto;
+}
+
+a {
+    color: $hyperlink;
+    text-decoration: none;
+}
+
+
+// Responsiveness
+@media only screen and (min-width: 900px) {
+    #container {
+      width: 900px;
+    }
+    #navbar-list {
+        display: block;
+    }
+    #hamburger {
+        display: none;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #container {
+      width: 760px;
+    }
+    #navbar-list {
+        display: block;
+    }
+    #hamburger {
+        display: none;
+    }
+}
+@media only screen and (max-width: 760px) {
+    #container {
+      width: 500px;
+    }
+    #navbar-list {
+        display: none;
+    }
+    #hamburger {
+        display: flex;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #container {
+      width: 300px;
+    }
+}
+
+
+
+// imports
+@import 'header';
+@import 'navbar';
+@import 'pagetitle';
+@import 'pagebody';
+@import 'footer';
+

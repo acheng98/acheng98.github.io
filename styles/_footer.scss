@@ -1,0 +1,43 @@
+#footer {
+    background: $dark;
+    @include body-font;
+    font-size: 11px;
+
+    #profile-link {
+        color: $light;
+    }
+    #profile-link:hover {
+        color: green;
+        font-size: 12px;
+    }
+}
+
+#inner-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 40px;
+    p {
+        padding: 5px 0px;
+    }
+}
+
+#footer-left {
+    max-width: 400px;
+}
+
+#footer-right {
+    ul {
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+    a {
+        color: $light;
+    }
+    a:hover {
+        color: $hyperlink;
+    }
+}
