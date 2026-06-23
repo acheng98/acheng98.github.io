@@ -287,5 +287,48 @@ a {
 
 #footer-right a:hover {
   color: #4682B4;
-}
+}]
 /*# sourceMappingURL=style.css.map */
+
+details.more-about {
+  margin: 0 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 0;
+}
+details.more-about > summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  padding: 0.5em 0;
+}
+details.more-about > summary::-webkit-details-marker {
+  display: none;
+}
+details.more-about > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+details.more-about[open] > summary::before {
+  content: "▾  ";
+}
+details.more-about .more-content {
+  padding-top: 0;
+}
+details.more-about .more-content > p:first-child {
+  margin-top: 0;
+}
+
+.recruiting {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  border-left: 4px solid #b3a369;
+  background: #f7f5ef;
+  border-radius: 4px;
+  color: #000;
+}
+.recruiting strong {
+  display: block;
+  margin-bottom: 0.25em;
+}
