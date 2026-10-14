@@ -1,3 +1,468 @@
-<!DOCTYPE html><html lang="en">
-	<meta http-equiv="refresh" content="0; URL='about.html'" />	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Anthony L. Cheng</title>
+	<meta name="description" content="Anthony L. Cheng — critical materials, supply chains, and energy systems. Incoming Assistant Professor, Georgia Tech ISyE.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+	<script>
+	(function () {
+		try {
+			var t = localStorage.getItem("theme");
+			if (t === "light" || t === "dark") {
+				document.documentElement.setAttribute("data-theme", t);
+			}
+		} catch (e) {}
+	})();
+	</script>
+	<style>
+		:root {
+			--bg: #fbfaf7;
+			--text: #1f2328;
+			--muted: #5b6470;
+			--rule: #e3e0d8;
+			--accent: #003057;
+			--accent-inverse: #b3a369;
+			--tile-1: #003057;
+			--tile-2: #6b7f99;
+			--tile-3: #b98b4e;
+			--tile-4: #7a9a86;
+			--tile-5: #b3a369;
+			--hatch-fg: #9aa0a6;
+			--hatch-bg: #fbfaf7;
+			color-scheme: light;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root:not([data-theme="light"]) {
+				--bg: #121416;
+				--text: #e6e4df;
+				--muted: #9aa0a6;
+				--rule: #2a2d31;
+				--accent: #b3a369;
+				--accent-inverse: #003057;
+				--tile-1: #b3a369;
+				--tile-2: #8496ad;
+				--tile-3: #c79b5f;
+				--tile-4: #8fae9a;
+				--tile-5: #5f7da3;
+				--hatch-fg: #6b7177;
+				--hatch-bg: #121416;
+				color-scheme: dark;
+			}
+		}
+
+		:root[data-theme="dark"] {
+			--bg: #121416;
+			--text: #e6e4df;
+			--muted: #9aa0a6;
+			--rule: #2a2d31;
+			--accent: #b3a369;
+			--accent-inverse: #003057;
+			--tile-1: #b3a369;
+			--tile-2: #8496ad;
+			--tile-3: #c79b5f;
+			--tile-4: #8fae9a;
+			--tile-5: #5f7da3;
+			--hatch-fg: #6b7177;
+			--hatch-bg: #121416;
+			color-scheme: dark;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			-webkit-text-size-adjust: 100%;
+		}
+
+		body {
+			margin: 0;
+			background: var(--bg);
+			color: var(--text);
+			font-family: "Open Sans", Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.6;
+			transition: background 0.2s ease, color 0.2s ease;
+		}
+
+		.wrap {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 48px 16px 32px;
+		}
+
+		a {
+			color: var(--accent);
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			text-underline-offset: 3px;
+			transition: text-decoration-color 0.15s ease;
+		}
+
+		a:hover,
+		a:focus-visible {
+			text-decoration-color: var(--accent);
+		}
+
+		h1,
+		h2 {
+			font-family: "Source Serif 4", Georgia, serif;
+			font-weight: 600;
+			line-height: 1.2;
+			margin: 0;
+		}
+
+		h1 {
+			font-size: 2.25rem;
+		}
+
+		h2 {
+			font-size: 1.35rem;
+			margin-bottom: 12px;
+		}
+
+		header {
+			display: flex;
+			gap: 24px;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.portrait {
+			width: 128px;
+			height: 128px;
+			border-radius: 50%;
+			object-fit: cover;
+			flex: 0 0 auto;
+		}
+
+		.id {
+			flex: 1 1 320px;
+			min-width: 0;
+		}
+
+		.roles {
+			margin: 8px 0 12px;
+			color: var(--muted);
+			font-size: 0.95rem;
+			line-height: 1.5;
+		}
+
+		.links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px 16px;
+			font-size: 0.95rem;
+		}
+
+		.topbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 32px;
+		}
+
+		.motif {
+			display: flex;
+			gap: 4px;
+		}
+
+		.motif span {
+			width: 12px;
+			height: 12px;
+			border-radius: 2px;
+			display: block;
+		}
+
+		.motif .m1 { background: var(--tile-1); }
+		.motif .m2 { background: var(--tile-2); }
+		.motif .m3 { background: var(--tile-3); }
+		.motif .m4 { background: var(--tile-4); }
+		.motif .m5 { background: var(--tile-5); }
+		.motif .mh {
+			background: repeating-linear-gradient(45deg, var(--hatch-fg) 0 2px, var(--hatch-bg) 2px 4px);
+			outline: 1px solid var(--hatch-fg);
+			outline-offset: -1px;
+		}
+
+		.theme-toggle {
+			background: none;
+			border: 1px solid var(--rule);
+			color: var(--text);
+			border-radius: 999px;
+			padding: 4px 12px;
+			font: inherit;
+			font-size: 0.85rem;
+			cursor: pointer;
+		}
+
+		.theme-toggle:hover,
+		.theme-toggle:focus-visible {
+			border-color: var(--accent);
+		}
+
+		section {
+			border-top: 1px solid var(--rule);
+			margin-top: 40px;
+			padding-top: 28px;
+		}
+
+		.recruiting {
+			background: var(--text);
+			color: var(--bg);
+			border-radius: 6px;
+			padding: 16px 20px;
+			margin: 20px 0;
+		}
+
+		.recruiting p {
+			margin: 0;
+		}
+
+		.recruiting a {
+			color: var(--accent-inverse);
+			text-decoration-color: currentColor;
+		}
+
+		.pubs {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.pubs li {
+			margin-bottom: 20px;
+		}
+
+		.pub-title {
+			font-weight: 600;
+		}
+
+		.pub-meta {
+			color: var(--muted);
+			font-size: 0.95rem;
+		}
+
+		.pub-note {
+			font-size: 0.9rem;
+			color: var(--muted);
+			font-style: italic;
+		}
+
+		.communities { margin-top: 20px; }
+		.communities-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 8px; }
+		.communities ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+		.communities a { display: inline-block; padding: 3px 12px; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.85rem; color: var(--text); text-decoration: none; transition: border-color 0.15s ease, color 0.15s ease; }
+		.communities a:hover, .communities a:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+		.more {
+			border-top: 1px solid var(--rule);
+			margin-top: 40px;
+			padding-top: 20px;
+		}
+
+		.more summary {
+			cursor: pointer;
+			font-family: "Source Serif 4", Georgia, serif;
+			font-weight: 600;
+			font-size: 1.15rem;
+			list-style: none;
+		}
+
+		.more summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.more summary::before {
+			content: "▸ ";
+			color: var(--accent);
+		}
+
+		.more[open] summary::before {
+			content: "▾ ";
+		}
+
+		.more h3 {
+			font-size: 1rem;
+			margin: 24px 0 8px;
+		}
+
+		.more ul {
+			padding-left: 20px;
+			margin: 0;
+		}
+
+		footer {
+			border-top: 1px solid var(--rule);
+			margin-top: 40px;
+			padding-top: 20px;
+			font-size: 0.85rem;
+			color: var(--muted);
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 8px 16px;
+		}
+
+		footer a {
+			color: var(--muted);
+		}
+
+		footer a:hover,
+		footer a:focus-visible {
+			color: var(--accent);
+		}
+
+		@media (max-width: 480px) {
+			.wrap {
+				padding-top: 32px;
+			}
+			h1 {
+				font-size: 1.85rem;
+			}
+			.portrait {
+				width: 96px;
+				height: 96px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="topbar">
+			<div class="motif" aria-hidden="true">
+				<span class="m1"></span>
+				<span class="m2"></span>
+				<span class="m3"></span>
+				<span class="m4"></span>
+				<span class="m5"></span>
+				<span class="mh"></span>
+			</div>
+			<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">◐ Theme</button>
+		</div>
+
+		<header>
+			<img class="portrait" src="./portrait.jpg" alt="Portrait of Anthony L. Cheng">
+			<div class="id">
+				<h1>Anthony L. Cheng</h1>
+				<p class="roles">
+					Incoming Assistant Professor, <a href="https://www.isye.gatech.edu">Georgia Tech ISyE</a> (Fall 2027)<br>
+					ORISE Postdoctoral Fellow, <a href="https://www.netl.doe.gov">NETL</a> · Visiting Postdoctoral Fellow, <a href="https://we3lab.stanford.edu">Stanford WE3 Lab</a>
+				</p>
+				<nav class="links" aria-label="Contact and profiles">
+					<a href="mailto:acheng337@gatech.edu">Email</a>
+					<a href="https://drive.google.com/file/d/1LG-HjrMrrKykeAmQ1FhNs6W3yqWtZg5a/view?usp=drive_link" target="_blank" rel="noopener">CV</a>
+					<a href="https://scholar.google.com/citations?user=-coomEQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+					<a href="https://www.linkedin.com/in/acheng98/" target="_blank" rel="noopener">LinkedIn</a>
+					<a href="https://github.com/acheng98" target="_blank" rel="noopener">GitHub</a>
+				</nav>
+			</div>
+		</header>
+
+		<section aria-labelledby="about-h">
+			<h2 id="about-h">About</h2>
+			<p>I’m Anthony Cheng, an <a href="https://orise.orau.gov/internships-fellowships/postdocs.html">ORISE Postdoctoral Fellow</a> with the <a href="https://www.netl.doe.gov">National Energy Technology Laboratory</a> (NETL) working with Dr. Alison Fritz and Dr. Sangbum Lee, with a visiting appointment at the <a href="https://we3lab.stanford.edu">WE3 Lab</a> at Stanford University with <a href="https://we3lab.stanford.edu/people/meagan-mauter">Dr. Meagan Mauter</a>. In Fall 2027, I will join the faculty of the <a href="https://www.isye.gatech.edu">H. Milton Stewart School of Industrial and Systems Engineering</a> at the Georgia Institute of Technology as an Anderson-Interface Early Career Assistant Professor.</p>
+
+			<div class="recruiting">
+				<p><strong>I am recruiting students to start in Fall 2027</strong> who want to work at the intersection of critical materials, supply chains, and energy systems, and who are comfortable moving between quantitative modeling and the realities of how materials are produced, traded, and regulated. If that sounds like you, I would be glad to <a href="mailto:acheng337@gatech.edu">hear from you</a>.</p>
+			</div>
+		</section>
+
+		<section aria-labelledby="research-h">
+			<h2 id="research-h">Research</h2>
+			<p>My research advances the understanding of supply chains, critical materials production, and manufacturing systems that underpin energy security, energy transitions, and decarbonization. Decisions about technology, sourcing, and policy shape how these materials and technologies are produced and traded, and those production and trade pathways in turn determine outcomes like supply-chain security, cost competitiveness, and emissions. My aim is to represent these pathways explicitly and at decision-relevant resolutions, so the trade-offs across those outcomes can be clearly evaluated.</p>
+			<p>My current work focuses on unconventional sources and processing routes for security-relevant critical minerals, building on previous research on vulnerabilities, incentives, and interventions in battery electric vehicle material supply chains. Future work aims to both deepen and expand these research trajectories, through endogenizing technology constraints and dynamics, firm manufacturing and sourcing choices, and how those interact with systems-level policy. This includes understanding strategic material and machine dependencies of energy technologies writ large, supply-chain decision-makers that current models overlook, and policies at different levels of geographic and institutional scales.</p>
+
+			<div class="communities">
+				<p class="communities-label">Where to find me (2026-2027)</p>
+				<ul>
+					<li><a href="https://macroenergysystems.org" title="Macro-Energy Systems">MES</a></li>
+					<li><a href="https://www.aclca.org" title="American Center for Life Cycle Assessment">ACLCA</a></li>
+					<li><a href="https://www.usaee.org/aws/USAEE/pt/sp/home_page" title="US Association for Energy Economics">USAEE</a></li>
+					<li><a href="https://www.informs.org" title="Institute for Operations Research and the Management Sciences">INFORMS</a></li>
+					<li><a href="https://www.agu.org" title="American Geophysical Union">AGU</a></li>
+					<li><a href="https://smeannualconference.org" title="MineXchange, SME Annual Conference">SME MineXchange</a></li>
+					<li><a href="https://www.industrystudies.org" title="Industry Studies Association">ISA</a></li>
+					<li><a href="https://issst.net" title="International Symposium on Sustainable Systems and Technology">ISSST</a></li>
+					<li><a href="https://is4ie.org" title="International Society for Industrial Ecology">ISIE</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section aria-labelledby="pubs-h">
+			<h2 id="pubs-h"><a href="https://drive.google.com/drive/folders/1rPV2_PNQrxles6ZBzLv-eNyBJM03K-EX?usp=drive_link">Selected publications</a></h2>
+			<ul class="pubs">
+				<li>
+					<div class="pub-title"><a href="https://www.nature.com/articles/s41560-024-01649-w">U.S. industrial policy may reduce electric vehicle battery supply chain vulnerabilities and influence technology choice</a></div>
+					<div class="pub-meta"><strong>Cheng, A.L.</strong>, Fuchs, E.R.H., Michalek, J.J. · <em>Nature Energy</em> 9, 1561–1570 (2024)</div>
+					<div class="pub-note">Featured in Nature Energy’s “Translating energy knowledge into policy” collection (2025). Companion tool: <a href="https://acheng98.shinyapps.io/IRAMineralPriceEffectsSim/">EV Battery Supply Chains Policy Scenario Explorer</a>.</div>
+				</li>
+				<li>
+					<div class="pub-title"><a href="https://www.nature.com/articles/s41467-024-46418-1">Electric vehicle battery chemistry affects supply chain disruption vulnerabilities</a></div>
+					<div class="pub-meta"><strong>Cheng, A.L.</strong>, Fuchs, E.R.H., Karplus, V.J., Michalek, J.J. · <em>Nature Communications</em> 15, 2143 (2024)</div>
+					<div class="pub-note">Ranked #8 in Nature Communications’ Top 25 Chemistry and Materials Science Articles of 2024.</div>
+				</li>
+				<li>
+					<div class="pub-title"><a href="https://link.springer.com/article/10.1007/s44498-026-00100-5">Controversy and consensus: common ground and best practices for life cycle assessment of emerging technologies</a></div>
+					<div class="pub-meta">Woods-Robinson, R., … <strong>Cheng, A.L.</strong>, et al. · <em>Journal of Industrial Ecology</em> (2026)</div>
+				</li>
+			</ul>
+			<p class="pub-meta">Working papers, policy comments, and talks are listed in my <a href="https://drive.google.com/file/d/1LG-HjrMrrKykeAmQ1FhNs6W3yqWtZg5a/view?usp=drive_link" target="_blank" rel="noopener">CV</a>.</p>
+		</section>
+
+		<section aria-labelledby="bg-h">
+			<h2 id="bg-h">Background</h2>
+			<p>I received my PhD from Carnegie Mellon University in <a href="https://www.cmu.edu/epp/">Engineering and Public Policy</a>, where I was an NSF Graduate Research Fellow advised by <a href="https://epp.engineering.cmu.edu/directory/bios/fuchs-erica.html">Dr. Erica Fuchs</a>, <a href="https://epp.engineering.cmu.edu/directory/bios/karplus-valerie.html">Dr. Valerie Karplus</a>, and <a href="https://epp.engineering.cmu.edu/directory/bios/michalek-jeremy.html">Dr. Jeremy Michalek</a>. I graduated from MIT in 2020 in Materials Science and Engineering, with minors in Computer Science and Energy Studies.</p>
+			<p>I serve as Vice President of the <a href="https://www.macroenergysystems.org/about-us">Macro-Energy Systems Society</a>, after serving as a fellow for the 2024-2025 year. I was also fortunate to participate as a 2024-2025 fellow in Resources for the Future's <a href="https://www.rff.org/topics/transportation/critical-minerals/critical-minerals-research-lab/">Critical Minerals Research Lab</a>, in addition to having researched decarbonization in the industrial sector as an <a href="https://urop.mit.edu/research-exploration/eloranta/about/prior-fellowship-recipients">MIT Eloranta Fellow</a>.</p>
+
+		</section>
+
+		<details class="more">
+			<summary>More about me</summary>
+			<p>I care a lot about helping others, both on a "micro" community level and a "macro" global world problems level. I'm proud of my work in Carnegie Mellon's <a href="https://www.cmu.edu/stugov/gsa/about-the-gsa/index.html">Graduate Student Assembly</a> as the Vice President of Campus Affairs, advocating for graduate students in all non-academic and non-social settings (e.g. transportation, healthcare, parents and families, sustainability, dining, public art, etc.). In my undergraduate studies, I appreciated having the opportunity to lead <a href="http://startup.mit.edu/">StartLabs</a> (MIT's undergrad entrepreneurship club) and <a href="https://mitguidetoresidences.mit.edu/residences/macgregor-house">MacGregor House</a> (my living community).</p>
+			<p>In the past, I've <a href="https://www.cee.org/news/eighty-four-high-school-students-selected-and-participating-32nd-research-science-institute-mit">been selected as one</a> of the nation's top high school STEM students, <a href="https://www.societyforscience.org/press-release/intel-isef-2015-grand-award-winners/">presented at International Science Fairs</a>, represented the United States at the <a href="https://www.eastbaytimes.com/2011/07/27/russian-team-takes-home-international-geography-bee-medal/">National Geographic World Championships</a>, performed as a piano soloist with the <a href="https://archive.sltrib.com/article.php?id=50327473&itype=cmsid">Utah Symphony</a> and at locations like Carnegie Hall, and been recognized with <a href="https://entrepreneurship.mit.edu/awards/">a</a> <a href="https://www2.ed.gov/programs/psp/2016/scholars.pdf">number</a> <a href="https://www.coca-colascholarsfoundation.org/blog/2016-coca-cola-scholars/">of</a> <a href="https://www.deseret.com/2016/3/11/20584691/2016-sterling-scholar-award-winners-geared-up-to-solve-world-s-problems">awards</a>. I also enjoy <a href="./things.html">reading</a>, <a href="./projects.html">creative media</a>, <a href="https://www.slcdunk.com/authors/acheng98">blogging about the NBA</a>, beatboxing and <a href="https://drive.google.com/drive/folders/1qCbU7Ls_Nk8k7twHoEJbzLnqWh85LR8u">a cappella</a> (having won awards for <a href="https://varsityvocals.com/results-page/?fwp_year=2023&fwp_venue=university-of-pittsburgh">Best Vocal Percussion</a> and <a href="https://varsityvocals.com/results-page/?fwp_year=2024&fwp_venue=university-of-pittsburgh">Best Arrangement</a> at the "real-life" version of Pitch Perfect), making Discord bots, and other elements of the arts.
+
+			<h3>Formative Media</h3>
+			<ul>
+				<li><em>Sustainable Energy - without the Hot Air</em>, David J. C. MacKay</li>
+				<li><em>Grit – Angela Duckworth</em></li>
+				<li><em>Mindset – Carol Dweck</em></li>
+				<li><em>Freakonomics – Stephen J. Dubner and Steven Levitt</em></li>
+				<li><em>Steal Like an Artist – Austin Kleon</em></li>
+				<li><a href="https://www.youtube.com/watch?v=m_56L8EGLIk">Mental Models 101</a> – Modern Wisdom</li>
+				<li><a href="https://theoatmeal.com/comics/creativity_things">Eight Marvelous & Melancholy Things I’ve Learned About Creativity</a> – The Oatmeal</li>
+				<li><a href="https://www.bloomberg.com/graphics/2018-us-land-use/">Here’s How America Uses Its Land</a>, Bloomberg</li>
+				<li><a href="https://www.technologyreview.com/2017/06/19/68258/why-bad-things-happen-to-clean-energy-startups/">Why Bad Things Happen to Clean-Energy Startups</a>, MIT Technology Review</li>
+			</ul>
+		</details>
+
+		<footer>
+			<div>© 2026 Anthony L. Cheng. Made with help from Claude.</div>
+		</footer>
+	</div>
+
+	<script>
+	(function () {
+		var btn = document.getElementById("theme-toggle");
+		var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+		function current() {
+			var t = document.documentElement.getAttribute("data-theme");
+			if (t === "light" || t === "dark") return t;
+			return mq && mq.matches ? "dark" : "light";
+		}
+		btn.addEventListener("click", function () {
+			var next = current() === "dark" ? "light" : "dark";
+			document.documentElement.setAttribute("data-theme", next);
+			try {
+				localStorage.setItem("theme", next);
+			} catch (e) {}
+		});
+	})();
+	</script>
+</body>
 </html>
